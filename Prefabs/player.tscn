@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Models/3D Character/character.material" type="Material" id=1]
+[ext_resource path="res://Prefabs/paint.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/player.gd" type="Script" id=3]
 [ext_resource path="res://Image/Camera Scope/scope.png" type="Texture" id=6]
 
@@ -672,6 +673,9 @@ anims/SHoot = SubResource( 10 )
 transform = Transform( 1.3318, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05373, 0 )
 shape = SubResource( 11 )
 
+[node name="paint" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.43781, 1.02103 )
+
 [node name="Head" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.18873, -4.82305 )
 
@@ -688,8 +692,8 @@ transform = Transform( 1.601, 0, 0, 0, 2.16248, 0, 0, 0, 2.13436, 0, 2.73456, 0 
 shape = SubResource( 12 )
 
 [node name="CinematicCamera" type="Camera" parent="."]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.0193741, 2.77405, -4.41046 )
-fov = 50.0
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.4621, 3.15755, -4.60071 )
+fov = 72.2
 
 [node name="TextureRect" type="TextureRect" parent="CinematicCamera"]
 margin_left = 309.0

@@ -1,0 +1,105 @@
+[gd_scene load_steps=10 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.87451, 0.996078, 0.0117647, 1 )
+metallic = 0.51
+refraction_enabled = true
+refraction_scale = 0.46
+refraction_texture_channel = 1
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+trail_divisor = 3
+trail_size_modifier = SubResource( 3 )
+spread = 8.57
+flatness = 0.32
+initial_velocity = 31.75
+linear_accel = -6.34
+scale = 1.6
+scale_random = 0.65
+
+[sub_resource type="SphereMesh" id=5]
+
+[sub_resource type="Animation" id=6]
+resource_name = "bleue"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Particles:material_override:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.0392157, 0.839216, 0.94902, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "jaune"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Particles:material_override:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.87451, 0.996078, 0.0117647, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "rouge"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Particles:material_override:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.164706, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "vert"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Particles:material_override:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.219608, 1, 0, 1 ) ]
+}
+
+[node name="paint" type="Spatial"]
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( -4.37114e-08, 0, -0.5, 0, 0.5, 0, 1, 0, -2.18557e-08, 0, 0, 0 )
+material_override = SubResource( 1 )
+emitting = false
+amount = 100
+lifetime = 4.19
+one_shot = true
+speed_scale = 1.93
+process_material = SubResource( 4 )
+draw_pass_1 = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/bleue = SubResource( 6 )
+anims/jaune = SubResource( 7 )
+anims/rouge = SubResource( 8 )
+anims/vert = SubResource( 9 )
