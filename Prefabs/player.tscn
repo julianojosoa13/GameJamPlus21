@@ -674,7 +674,7 @@ transform = Transform( 1.3318, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05373, 0 )
 shape = SubResource( 11 )
 
 [node name="paint" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.40459, 1.18305 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.43781, 1.02103 )
 
 [node name="Head" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.18873, -4.82305 )
@@ -692,8 +692,8 @@ transform = Transform( 1.601, 0, 0, 0, 2.16248, 0, 0, 0, 2.13436, 0, 2.73456, 0 
 shape = SubResource( 12 )
 
 [node name="CinematicCamera" type="Camera" parent="."]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.95519, 2.77405, -4.41046 )
-fov = 50.0
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.4621, 3.15755, -4.60071 )
+fov = 72.2
 
 [node name="TextureRect" type="TextureRect" parent="CinematicCamera"]
 margin_left = 309.0

@@ -21,6 +21,13 @@ enum {
 	CAPTURING = 4
 }
 
+enum {
+	BLEU = 0,
+	VERT = 1,
+	ROUGE = 2,
+	JAUNE = 3
+}
+
 var initial_pos = Vector3.ZERO
 var cam_accel = 40
 var mouse_sense = 0.1
@@ -69,9 +76,23 @@ func _input(event):
 #				state = CAPTURING
 #				$CinematicCamera/TextureRect.visible = true	
 			if Input.is_action_just_released("fire"):
+				var couleur = get_rand_array([BLEU, VERT,JAUNE, ROUGE])
+				match couleur:
+					BLEU:
+						$paint/AnimationPlayer.play("bleue")
+					JAUNE:
+						$paint/AnimationPlayer.play("jaune")
+					ROUGE:
+						$paint/AnimationPlayer.play("rouge")
+					VERT:
+						$paint/AnimationPlayer.play("vert")
 				$CinematicCamera.current = false
 				$Head/Camera.current = true
 				$paint/Particles.emitting = false
+
+func get_rand_array(liste):
+	randomize()
+	return liste[randi() % liste.size()]
 
 func respawn():
 	translation= initial_pos
