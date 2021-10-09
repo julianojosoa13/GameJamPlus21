@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Wood_Floor_Corner.obj-fd1e0794fc796bd6f2478ddc1988aafc.mesh"
+
+[deps]
+
+files=[ "res://.import/Wood_Floor_Corner.obj-fd1e0794fc796bd6f2478ddc1988aafc.mesh" ]
+
+source_file="res://Models/Modular Village/Wood_Floor_Corner.obj"
+dest_files=[ "res://.import/Wood_Floor_Corner.obj-fd1e0794fc796bd6f2478ddc1988aafc.mesh", "res://.import/Wood_Floor_Corner.obj-fd1e0794fc796bd6f2478ddc1988aafc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

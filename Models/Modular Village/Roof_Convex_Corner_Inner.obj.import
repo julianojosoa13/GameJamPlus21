@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Roof_Convex_Corner_Inner.obj-34ded3bf97802691d86bc1addf1d542c.mesh"
+
+[deps]
+
+files=[ "res://.import/Roof_Convex_Corner_Inner.obj-34ded3bf97802691d86bc1addf1d542c.mesh" ]
+
+source_file="res://Models/Modular Village/Roof_Convex_Corner_Inner.obj"
+dest_files=[ "res://.import/Roof_Convex_Corner_Inner.obj-34ded3bf97802691d86bc1addf1d542c.mesh", "res://.import/Roof_Convex_Corner_Inner.obj-34ded3bf97802691d86bc1addf1d542c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

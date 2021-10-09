@@ -590,7 +590,7 @@ tracks/9/keys = PoolRealArray( 0, 1, 0, 0, 0, -8.14603e-08, 0, 0, 1, 1, 1, 1, 1.
 
 [sub_resource type="BoxShape" id=11]
 
-[sub_resource type="BoxShape" id=15]
+[sub_resource type="BoxShape" id=12]
 extents = Vector3( 1, 1, 0.875978 )
 
 [node name="player" type="KinematicBody" groups=[
@@ -685,7 +685,7 @@ collision_mask = 16
 
 [node name="CollisionShape" type="CollisionShape" parent="HurtBox"]
 transform = Transform( 1.601, 0, 0, 0, 2.16248, 0, 0, 0, 2.13436, 0, 2.73456, 0 )
-shape = SubResource( 15 )
+shape = SubResource( 12 )
 
 [node name="CinematicCamera" type="Camera" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.0193741, 2.77405, -4.41046 )

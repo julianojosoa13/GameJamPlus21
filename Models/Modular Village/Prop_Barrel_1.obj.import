@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Barrel_1.obj-09ef0fd8b2b59b75c761aad4d0de680b.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Barrel_1.obj-09ef0fd8b2b59b75c761aad4d0de680b.mesh" ]
+
+source_file="res://Models/Modular Village/Prop_Barrel_1.obj"
+dest_files=[ "res://.import/Prop_Barrel_1.obj-09ef0fd8b2b59b75c761aad4d0de680b.mesh", "res://.import/Prop_Barrel_1.obj-09ef0fd8b2b59b75c761aad4d0de680b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

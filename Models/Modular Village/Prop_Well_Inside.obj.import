@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Well_Inside.obj-2eb22e841c90e824e843f9be0c6083fa.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Well_Inside.obj-2eb22e841c90e824e843f9be0c6083fa.mesh" ]
+
+source_file="res://Models/Modular Village/Prop_Well_Inside.obj"
+dest_files=[ "res://.import/Prop_Well_Inside.obj-2eb22e841c90e824e843f9be0c6083fa.mesh", "res://.import/Prop_Well_Inside.obj-2eb22e841c90e824e843f9be0c6083fa.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

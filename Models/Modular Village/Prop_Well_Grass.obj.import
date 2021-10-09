@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Well_Grass.obj-70b04766aeebc7da90ac4412299ce1e0.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Well_Grass.obj-70b04766aeebc7da90ac4412299ce1e0.mesh" ]
+
+source_file="res://Models/Modular Village/Prop_Well_Grass.obj"
+dest_files=[ "res://.import/Prop_Well_Grass.obj-70b04766aeebc7da90ac4412299ce1e0.mesh", "res://.import/Prop_Well_Grass.obj-70b04766aeebc7da90ac4412299ce1e0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

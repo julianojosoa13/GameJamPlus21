@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Hay_1.obj-8658495228069778d78899825fdab0c8.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Hay_1.obj-8658495228069778d78899825fdab0c8.mesh" ]
+
+source_file="res://Models/Modular Village/Prop_Hay_1.obj"
+dest_files=[ "res://.import/Prop_Hay_1.obj-8658495228069778d78899825fdab0c8.mesh", "res://.import/Prop_Hay_1.obj-8658495228069778d78899825fdab0c8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

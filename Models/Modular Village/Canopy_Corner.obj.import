@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Canopy_Corner.obj-266207d3dcb8fbd38b4ba8e2bb0c5649.mesh"
+
+[deps]
+
+files=[ "res://.import/Canopy_Corner.obj-266207d3dcb8fbd38b4ba8e2bb0c5649.mesh" ]
+
+source_file="res://Models/Modular Village/Canopy_Corner.obj"
+dest_files=[ "res://.import/Canopy_Corner.obj-266207d3dcb8fbd38b4ba8e2bb0c5649.mesh", "res://.import/Canopy_Corner.obj-266207d3dcb8fbd38b4ba8e2bb0c5649.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
