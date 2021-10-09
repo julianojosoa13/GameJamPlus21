@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/danger.vox-5577243b5bcb92261bf11b6714930fc2.mesh"
+
+[deps]
+
+source_file="res://Vox/danger.vox"
+dest_files=[ "res://.import/danger.vox-5577243b5bcb92261bf11b6714930fc2.mesh" ]
+
+[params]
+
+Scale=0.15
+GreedyMeshGenerator=false
+SnapToGround=false

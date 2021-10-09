@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/epee.vox-a7272f211747f8b70b767b29da20ed85.mesh"
+
+[deps]
+
+source_file="res://Vox/epee.vox"
+dest_files=[ "res://.import/epee.vox-a7272f211747f8b70b767b29da20ed85.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=false
+SnapToGround=false

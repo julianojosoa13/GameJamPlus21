@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/porte_ouvert.vox-d39efddd864906eaa3d0d569e5f405f3.mesh"
+
+[deps]
+
+source_file="res://Vox/porte_ouvert.vox"
+dest_files=[ "res://.import/porte_ouvert.vox-d39efddd864906eaa3d0d569e5f405f3.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=false
+SnapToGround=false

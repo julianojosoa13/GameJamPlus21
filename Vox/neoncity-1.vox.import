@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/neoncity-1.vox-6fe6fbe149f769f2e5d4fc4bbedb6d7b.mesh"
+
+[deps]
+
+source_file="res://Vox/neoncity-1.vox"
+dest_files=[ "res://.import/neoncity-1.vox-6fe6fbe149f769f2e5d4fc4bbedb6d7b.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=false
+SnapToGround=false

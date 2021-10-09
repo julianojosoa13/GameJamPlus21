@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/Ghosty.vox-4d976ad240ad1d1c7a72944410f15edc.mesh"
+
+[deps]
+
+source_file="res://Vox/Ghosty.vox"
+dest_files=[ "res://.import/Ghosty.vox-4d976ad240ad1d1c7a72944410f15edc.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=false
+SnapToGround=false
