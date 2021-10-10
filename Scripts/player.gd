@@ -11,7 +11,7 @@ var life = 3
 #var poursuivants = 0
 
 var ouvert = false
-var captured = false
+var can_shoot = true
 
 enum {
 	CONTROLLABLE = 0,
@@ -51,9 +51,10 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	initial_pos = translation
 	initial_direction = global_transform.origin
-	$CinematicCamera/TextureRect.visible = false
 	nbr_fantome = 0
-	captured = true
+	$Bouteille.max_value = $paint/Particles.lifetime
+	$Bouteille.min_value = $paint/Particles.lifetime / 2
+	$Bouteille.value = $paint/Particles.lifetime
 	
 	#mesh no longer inherits rotation of parent, allowing it to rotate freely
 #	mesh.set_as_toplevel(true)
@@ -68,24 +69,34 @@ func _input(event):
 				head.rotation.x = clamp(head.rotation.x, deg2rad(-60), deg2rad(50))
 				$paint.rotate_x(deg2rad(event.relative.y * mouse_sense))
 				$paint.rotation.x = clamp(head.rotation.x, deg2rad(-30), deg2rad(10))
-			if Input.is_action_pressed("fire"):
-				$CinematicCamera.current = true
-				$Head/Camera.current = false
-				$paint/Particles.emitting = true
-#				$Armature/Skeleton/character.visible = false
-#				state = CAPTURING
-#				$CinematicCamera/TextureRect.visible = true	
-			if Input.is_action_just_released("fire"):
+			if Input.is_action_just_pressed("fire"):
+				
 				var couleur = get_rand_array([BLEU, VERT,JAUNE, ROUGE])
-				match couleur:
-					BLEU:
-						$paint/AnimationPlayer.play("bleue")
-					JAUNE:
-						$paint/AnimationPlayer.play("jaune")
-					ROUGE:
-						$paint/AnimationPlayer.play("rouge")
-					VERT:
-						$paint/AnimationPlayer.play("vert")
+				if $paint/Particles.emitting == false:
+					match couleur:
+						BLEU:
+							$paint/AnimationPlayer.play("bleue")
+							$Label/ColorUI.play("bleue")
+						JAUNE:
+							$paint/AnimationPlayer.play("jaune")
+							$Label/ColorUI.play("jaune")
+						ROUGE:
+							$paint/AnimationPlayer.play("rouge")
+							$Label/ColorUI.play("rouge")
+						VERT:
+							$Label/ColorUI.play("vert")
+							$paint/AnimationPlayer.play("vert")
+					$CinematicCamera.current = true
+					$Head/Camera.current = false
+					$paint/Particles.emitting = true
+					
+					$Timer.start($paint/Particles.lifetime)
+#					if $Timer.paused == false:
+#						$Timer.paused = true
+#			
+			
+			if Input.is_action_just_released("fire"):
+				$Timer.stop()
 				$CinematicCamera.current = false
 				$Head/Camera.current = true
 				$paint/Particles.emitting = false
@@ -134,6 +145,11 @@ func _process(_delta):
 				$AnimationPlayer.play("Run")
 			else:
 				$AnimationPlayer.play("Idle")
+				
+	if $paint/Particles.emitting == true and $Timer.time_left > 0:
+		$Bouteille.value = $Timer.time_left
+		print(str($paint/Particles.lifetime) + " - " +  str($Timer.time_left))
+		
 
 func _physics_process(delta):
 	match state:

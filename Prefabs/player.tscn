@@ -1,9 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Models/3D Character/character.material" type="Material" id=1]
 [ext_resource path="res://Prefabs/paint.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/player.gd" type="Script" id=3]
-[ext_resource path="res://Image/Camera Scope/scope.png" type="Texture" id=6]
+[ext_resource path="res://Image/UI/bottle_vide.png" type="Texture" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "character"
@@ -594,6 +594,91 @@ tracks/9/keys = PoolRealArray( 0, 1, 0, 0, 0, -8.14603e-08, 0, 0, 1, 1, 1, 1, 1.
 [sub_resource type="BoxShape" id=12]
 extents = Vector3( 1, 1, 0.875978 )
 
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.0313726, 1, 0, 1 )
+corner_radius_top_left = 50
+corner_radius_top_right = 5
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id=14]
+resource_name = "blanc"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/normal:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.992157, 0.992157, 0.992157, 1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "bleue"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/normal:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.054902, 0.835294, 0.690196, 1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "jaune"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/normal:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.972549, 0.847059, 0.0156863, 1 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "rouge"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/normal:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.160784, 0.0235294, 1 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "vert"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/normal:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.0313726, 1, 0, 1 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.933333, 0.0588235, 0.0588235, 0.0823529 )
+
 [node name="player" type="KinematicBody" groups=[
 "player",
 ]]
@@ -695,14 +780,41 @@ shape = SubResource( 12 )
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.4621, 3.15755, -4.60071 )
 fov = 72.2
 
-[node name="TextureRect" type="TextureRect" parent="CinematicCamera"]
-margin_left = 309.0
-margin_top = 160.0
-margin_right = 971.0
-margin_bottom = 557.0
-texture = ExtResource( 6 )
+[node name="Label" type="Label" parent="."]
+margin_left = 993.272
+margin_top = 51.0416
+margin_right = 1212.27
+margin_bottom = 91.0416
+custom_styles/normal = SubResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ColorUI" type="AnimationPlayer" parent="Label"]
+anims/blanc = SubResource( 14 )
+anims/bleue = SubResource( 15 )
+anims/jaune = SubResource( 16 )
+anims/rouge = SubResource( 17 )
+anims/vert = SubResource( 18 )
+
+[node name="Bouteille" type="ProgressBar" parent="."]
+margin_left = 105.0
+margin_top = 616.0
+margin_right = 354.0
+margin_bottom = 664.0
+rect_rotation = -89.4265
+rect_scale = Vector2( 0.921206, 2.20474 )
+custom_styles/bg = SubResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 158.208, 485.745 )
+scale = Vector2( 0.582263, 1 )
+texture = ExtResource( 4 )
 
 [connection signal="body_entered" from="HurtBox" to="." method="_on_HurtBox_body_entered"]
