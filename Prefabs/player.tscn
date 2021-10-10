@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Models/3D Character/character.material" type="Material" id=1]
 [ext_resource path="res://Prefabs/paint.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/player.gd" type="Script" id=3]
 [ext_resource path="res://Image/UI/bottle_vide.png" type="Texture" id=4]
+[ext_resource path="res://Prefabs/HeartUI.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "character"
@@ -684,6 +685,7 @@ bg_color = Color( 0.933333, 0.0588235, 0.0588235, 0.0823529 )
 ]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.128704 )
 script = ExtResource( 3 )
+speed = 5
 
 [node name="Light" type="Spatial" parent="."]
 transform = Transform( -0.290865, 0.566393, 0.771101, -0.0551891, 0.794672, -0.604525, -0.955171, -0.218391, -0.199883, 4.07625, 5.90386, -1.00545 )
@@ -812,9 +814,13 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="UI_bouteille" type="Sprite" parent="."]
 position = Vector2( 158.208, 485.745 )
 scale = Vector2( 0.582263, 1 )
 texture = ExtResource( 4 )
+
+[node name="HeartUI" parent="." instance=ExtResource( 5 )]
+margin_left = 4.0
+margin_right = 4.0
 
 [connection signal="body_entered" from="HurtBox" to="." method="_on_HurtBox_body_entered"]

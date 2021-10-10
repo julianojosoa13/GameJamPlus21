@@ -7,10 +7,10 @@
 [sub_resource type="SpatialMaterial" id=2]
 params_use_alpha_scissor = true
 params_alpha_scissor_threshold = 0.98
-albedo_color = Color( 0.0392157, 0.839216, 0.94902, 1 )
+albedo_color = Color( 1, 0.164706, 0, 1 )
 albedo_texture = ExtResource( 1 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 resource_name = "bleue"
 tracks/0/type = "value"
 tracks/0/path = NodePath("MeshInstance:material/0:albedo_color")
@@ -25,8 +25,7 @@ tracks/0/keys = {
 "values": [ Color( 0.0392157, 0.839216, 0.94902, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "jaune"
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath("MeshInstance:material/0:albedo_color")
 tracks/0/interp = 1
@@ -40,8 +39,7 @@ tracks/0/keys = {
 "values": [ Color( 0.87451, 0.996078, 0.0117647, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "rouge"
+[sub_resource type="Animation" id=5]
 tracks/0/type = "value"
 tracks/0/path = NodePath("MeshInstance:material/0:albedo_color")
 tracks/0/interp = 1
@@ -55,8 +53,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0.164706, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "vert"
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath("MeshInstance:material/0:albedo_color")
 tracks/0/interp = 1
@@ -78,7 +75,7 @@ mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/bleue = SubResource( 6 )
-anims/jaune = SubResource( 3 )
-anims/rouge = SubResource( 4 )
-anims/vert = SubResource( 5 )
+anims/bleue = SubResource( 3 )
+anims/jaune = SubResource( 4 )
+anims/rouge = SubResource( 5 )
+anims/vert = SubResource( 6 )

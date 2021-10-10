@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/Splatt.vox-a98d46d783a1455c4b94f1492bb37c0c.mesh"
+
+[deps]
+
+source_file="res://Vox/Splatt.vox"
+dest_files=[ "res://.import/Splatt.vox-a98d46d783a1455c4b94f1492bb37c0c.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
